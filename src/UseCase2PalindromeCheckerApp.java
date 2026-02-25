@@ -1,15 +1,17 @@
-public class UseCase1PalindromeCheckerApp {
+public class UseCase2PalindromeCheckerApp {
+
+    private static final String APP_VERSION = "1.1.0";
+
+    public static void main(String[] args) {
 
         System.out.println("====================================");
         System.out.println("     PALINDROME CHECKER APP");
         System.out.println("====================================");
 
-
-        System.out.println("Welcome to the Palindrome Checker Application!");
-
+        System.out.println("Application Version : " + APP_VERSION);
         System.out.println("====================================");
-        System.out.println("Program initialized successfully.");
-        System.out.println("====================================");
+
+
         String word = "madam";
 
         System.out.println("Checking word: " + word);
