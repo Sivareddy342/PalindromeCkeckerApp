@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.Deque;
 
 public class UseCase1PalindromeCheckerApp {
 
@@ -102,6 +103,41 @@ public class UseCase1PalindromeCheckerApp {
             System.out.println(input3 + " is a Palindrome (Stack + Queue).");
         } else {
             System.out.println(input3 + " is NOT a Palindrome (Stack + Queue).");
+        }
+
+        System.out.println("====================================");
+
+        // ==============================
+        // Method 5: UC7 - Deque Based Method
+        // ==============================
+        String input4 = "racecar";
+
+        System.out.println("UC7 - Deque Based Palindrome Checker");
+        System.out.println("Input String: " + input4);
+
+        Deque<Character> deque = new LinkedList<>();
+
+        for (int i = 0; i < input4.length(); i++) {
+            deque.addLast(input4.charAt(i));
+        }
+
+        boolean isPalindrome3 = true;
+
+        while (deque.size() > 1) {
+
+            char front = deque.removeFirst();
+            char rear = deque.removeLast();
+
+            if (front != rear) {
+                isPalindrome3 = false;
+                break;
+            }
+        }
+
+        if (isPalindrome3) {
+            System.out.println(input4 + " is a Palindrome (Deque).");
+        } else {
+            System.out.println(input4 + " is NOT a Palindrome (Deque).");
         }
 
         System.out.println("====================================");
