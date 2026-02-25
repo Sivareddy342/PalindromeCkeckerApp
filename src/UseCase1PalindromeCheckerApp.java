@@ -29,36 +29,33 @@ public class UseCase1PalindromeCheckerApp {
         } else {
             System.out.println("The given string \"" + original + "\" is NOT a palindrome.");
         }
-
-        System.out.println("====================================");
-        System.out.println("     PALINDROME CHECKER APP");
-        System.out.println("====================================");
+        String input = "madam";
 
 
-        System.out.println("Welcome to the Palindrome Checker Application!");
+        char[] characters = input.toCharArray();
 
-        System.out.println("====================================");
-        System.out.println("Program initialized successfully.");
-        System.out.println("====================================");
-        String word = "madam";
-
-        System.out.println("Checking word: " + word);
+        int start = 0;
+        int end = characters.length - 1;
+        boolean isPalindrome = true;
 
 
-        String reversedWord = "";
+        while (start < end) {
 
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversedWord = reversedWord + word.charAt(i);
+            if (characters[start] != characters[end]) {
+                isPalindrome = false;
+                break;
+            }
+
+            start++;
+            end--;
         }
 
-        if (word.equals(reversedWord)) {
-            System.out.println(word + " is a Palindrome.");
+        System.out.println("Input String : " + input);
+
+        if (isPalindrome) {
+            System.out.println("Result : It is a Palindrome");
         } else {
-            System.out.println(word + " is NOT a Palindrome.");
+            System.out.println("Result : It is NOT a Palindrome");
         }
-
-        System.out.println("====================================");
-        System.out.println("Program execution completed.");
-        System.out.println("====================================");
     }
 }
